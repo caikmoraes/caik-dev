@@ -1,1 +1,1 @@
-@font-face{font-family:'Roboto';src:url(../fonts/Roboto-Regular.ttf)}h1{color:red}
+aside{float:left;width:20vw;background-color:#1a1919;padding:20px;height:100vh}aside article{display:flex;flex-direction:row;justify-content:space-around;align-items:center;flex-wrap:wrap}aside article img{width:50px}aside article h3{color:white;font-weight:bold}aside nav ul{list-style:none}aside nav ul li{padding:10px 20px}*{padding:0;margin:0;box-sizing:border-box}

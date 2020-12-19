@@ -1,0 +1,37 @@
+@import 'colors.scss';
+
+aside {
+    float: left;
+    width: 20vw;
+    background-color: $first-color;
+    padding: 20px;
+    height: 100vh;
+    
+    article{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+
+        img {
+            width: 50px;
+        }
+
+        h3{
+            color: $menu-text-color;
+            font-weight: bold;
+        }
+        
+    }
+
+
+    nav {
+        ul {
+            list-style: none;
+            li{
+                padding: 10px 20px;
+            }
+        }
+    }
+}
