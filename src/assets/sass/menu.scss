@@ -8,6 +8,9 @@
 header{
     background-color: $first-color;
     width: 100vw;
+    height: 40px;
+    position: fixed;
+    display: none;
     i {
         color: white;
         font-size: 16pt;
@@ -37,17 +40,15 @@ nav {
     .menu-header {
         grid-row: 1;
         padding: 20px 40px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
+        display: inline;
 
         img {
             width: 50px;
+            text-align: left;
         }
 
         h3 {
+            text-align: right;
             color: $menu-text-color;
             font-weight: bold;
             font-size: 16pt;
@@ -95,5 +96,12 @@ nav {
                 background: $third-color;
             }
         }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        display: flex;
+        align-items: center;
     }
 }
