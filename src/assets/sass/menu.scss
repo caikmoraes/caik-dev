@@ -2,15 +2,18 @@
 
 aside {
     float: left;
-    width: 20vw;
+    width: 25vw;
     background-color: $first-color;
-    padding: 20px;
     height: 100vh;
+    display: grid;
+    grid-template-rows: repeat(1fr, 3);
     
-    article{
+    .menu-header{
+        grid-row: 1;
+        padding: 20px;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
 
@@ -22,15 +25,35 @@ aside {
             color: $menu-text-color;
             font-weight: bold;
         }
-        
+    }
+    .menu-footer{
+        grid-row: 3;
+        display: flex;
+        justify-content: center;
+        a{
+            margin: 0 15px;
+            color: $menu-text-color;
+            i {
+                font-size: 30px;
+            }
+        }
     }
 
 
     nav {
-        ul {
-            list-style: none;
-            li{
-                padding: 10px 20px;
+        grid-row: 2;
+        width: 25vw;
+        li {
+            width: 100%;
+            a {
+                display: block;
+                padding: 20px;
+                text-decoration: none;
+                color: $menu-text-color;
+            }
+            
+            :hover {
+                background: $third-color;
             }
         }
     }

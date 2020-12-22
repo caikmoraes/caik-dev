@@ -1,12 +1,15 @@
+const getMenuLinkURL = e => e.attributes['c-link'].value
+const getDestinationElement = e => e.attributes['c-dest'].value
+
 function watchLinks() {
     const links = document.querySelectorAll('[c-link]')
     links.forEach(link => {
         console.log(link)
-        console.log(link.attributes['c-link'].value)
-        console.log(link.attributes['c-dest'].value)
+        console.log(getMenuLinkURL(link))
+        console.log(getDestinationElement(link))
 
-        const url = link.attributes['c-link'].value
-        const dest = link.attributes['c-dest'].value
+        const url = getMenuLinkURL(link)
+        const dest = getDestinationElement(link);
 
         link.onclick = e => {
             e.preventDefault()
