@@ -1,42 +1,39 @@
-const getMenuLinkURL = e => e.attributes['c-link'].value
-const getDestinationElement = e => e.attributes['c-dest'].value
-
-function watchLinks() {
+function turnLinkSelected(hash) {
     const links = document.querySelectorAll('[c-link]')
-    links.forEach(link => {
-        console.log(link)
-        console.log(getMenuLinkURL(link))
-        console.log(getDestinationElement(link))
+    links.forEach(e => e.classList.remove('selected'))
 
-        const url = getMenuLinkURL(link)
-        const dest = getDestinationElement(link);
+    const link = document.querySelector(`[c-link='${hash}']`)
+    link.classList.add('selected')
+}
 
-        link.onclick = e => {
-            e.preventDefault()
-            ajaxNavigation(url, dest)
-        }
+function ajaxNavigation(link) {
+    if(!link) return
+
+    const dest = document.querySelector('[c-page-content]')
+    const url = link.substring(1)
+    fetch(url)
+    .then(resp => resp.text())
+    .then(html => {
+        dest.innerHTML = html
+        turnLinkSelected(link)
     })
 }
 
-function ajaxNavigation(url, selector, push = true) {
-    if (!url || !selector) return
-
-    const element = document.querySelector(selector)
-    fetch(url)
-        .then(resp => resp.text())
-        .then(content => {
-            element.innerHTML = content
-
-            if(push) {
-                history.pushState({ selector }, null, url)
-            }
-        })
+function configureLinks() {
+    document.querySelectorAll('[c-link]').forEach(link => link.href = link.attributes['c-link'].value)
 }
 
-window.onpopstate = e => {
-    if (e.state) {
-        ajaxNavigation(window.location.href, e.state.selector, false)
+function firstNavigation() {
+    if (location.hash) {
+        ajaxNavigation(location.hash)
+    }
+    else {
+        const firstLink = document.querySelector('[c-link]')
+        ajaxNavigation(firstLink.hash)
     }
 }
 
-watchLinks()
+window.onhashchange = e => ajaxNavigation(location.hash)
+
+configureLinks()
+firstNavigation()
