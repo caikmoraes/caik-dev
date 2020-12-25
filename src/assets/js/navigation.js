@@ -1,10 +1,20 @@
+function setHeaderTitle(link) {
+    const iconElement = link.firstElementChild;
+    const iconClass = iconElement.attributes['c-icon'].value
+    const pageTitle = document.querySelector('.page-title')
+    const title = `<i class='fas fa-${iconClass}'></i><h3>${link.attributes['c-page'].value}</h3>`
+    pageTitle.innerHTML = title
+}
+
 function turnLinkSelected(hash) {
     const links = document.querySelectorAll('[c-link]')
     links.forEach(e => e.classList.remove('selected'))
 
     const link = document.querySelector(`[c-link='${hash}']`)
     link.classList.add('selected')
+    if(screen.width < 480) {setHeaderTitle(link)}
 }
+
 
 function ajaxNavigation(link) {
     if(!link) return

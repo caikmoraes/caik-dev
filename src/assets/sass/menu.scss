@@ -13,7 +13,8 @@ header{
     display: none;
     position: absolute;
     box-sizing: border-box;
-    i {
+    i[c-toggle] {
+        position: fixed;
         color: white;
         font-size: 16pt;
         padding: 20px;
@@ -24,6 +25,16 @@ header{
     }
     i[c-toggle=close] {
         display: none;
+    }
+    span {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        i {
+            padding: 0 10px;
+        }
     }
 }
 

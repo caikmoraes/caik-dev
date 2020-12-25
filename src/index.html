@@ -15,6 +15,7 @@
     <header>
         <i class="fas fa-bars" c-toggle='open'></i>
         <i class="fas fa-times" c-toggle='close'></i>
+        <span class='page-title'></span>
     </header>
     <nav>
         <div class='menu-header'>
@@ -23,19 +24,19 @@
         </div>
         <ul>
             <li>
-                <a c-link='#/pages/begin.html'><i class="fas fa-home"></i>Início</a>
+                <a c-link='#/pages/begin.html' c-page='Início'><i c-icon='home' class="fas fa-home"></i>Início</a>
             </li>
             <li>
-                <a c-link='#/pages/about.html'><i class="fas fa-user"></i>Sobre Mim</a>
+                <a c-link='#/pages/about.html' c-page='Sobre Mim'><i c-icon='user' class="fas fa-user"></i>Sobre Mim</a>
             </li>
             <li>
-                <a c-link='#/pages/education.html'><i class="fas fa-university"></i>Formação</a>
+                <a c-link='#/pages/education.html' c-page='Formação'><i c-icon='university' class="fas fa-university"></i>Formação</a>
             </li>
             <li>
-                <a c-link='#/pages/experience.html'><i class="fas fa-briefcase"></i>Experiência</a>
+                <a c-link='#/pages/experience.html' c-page='Experiência'><i c-icon='briefcase' class="fas fa-briefcase"></i>Experiência</a>
             </li>
             <li>
-                <a c-link='#/pages/portfolio.html'><i class="fas fa-laptop-code"></i>Portfólio</a>
+                <a c-link='#/pages/portfolio.html' c-page='Portfólio'><i c-icon='laptop-code' class="fas fa-laptop-code"></i>Portfólio</a>
             </li>
         </ul>
         <div class="menu-footer">
