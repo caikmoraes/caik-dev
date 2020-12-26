@@ -6,12 +6,13 @@
 }
 
 header{
+    z-index: 1;
     background-color: $first-color;
     top: 0;
     width: 100vw;
     height: 40px;
     display: none;
-    position: absolute;
+    position: fixed;
     box-sizing: border-box;
     i[c-toggle] {
         position: fixed;
@@ -39,6 +40,7 @@ header{
 }
 
 nav {
+    z-index: 1;
     position: fixed;
     top: 0;
     left: 0;
@@ -114,6 +116,12 @@ nav {
                 background: $third-color;
             }
         }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        width: 30%;
     }
 }
 

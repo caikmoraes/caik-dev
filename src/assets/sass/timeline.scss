@@ -1,0 +1,167 @@
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: #818181;
+}
+
+.timeline {
+    position: relative;
+    margin: auto;
+    padding: 20px 0;
+    width: 100%;
+
+    ul{
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style: none;
+            position: relative;
+            width: 50%;
+            padding: 10px 20px 40px 20px;
+
+            .timeline-content{
+                padding-bottom: 40px;
+
+                h3{
+                    padding: 10px 0;
+                    font-weight: 600;
+                    background-color: $third-color;
+                    color: $menu-text-color;
+                    padding: 10px 15px;
+                }
+
+                p{
+                    padding: 10px 15px;
+                    background-color: $fourth-color;
+                    color: $first-color;
+                }
+            }
+        }
+        
+        li:nth-child(odd)::before{
+            content: '';
+            position: absolute;
+            top: 24px;
+            right: -6px;
+            width: 10px;
+            height: 10px;
+            background-color: #818181;
+            border-radius: 50%;
+        }
+        li:nth-child(odd) {
+            float: left;
+            text-align: right;
+            clear: both;
+
+            .timeline-date {
+                position: absolute;
+                top: 13px;
+                right: -35%;
+                margin: 0;
+                padding: 10px 20px;
+                background-color: $first-color;
+                color: $menu-text-color;
+                border-radius: 30px;
+            }
+        }
+        
+        li:nth-child(even)::before{
+            content: '';
+            position: absolute;
+            top: 24px;
+            left: -4px;
+            width: 10px;
+            height: 10px;
+            background-color: #818181;
+            border-radius: 50%;
+        }
+
+        li:nth-child(even) {
+            float: right;
+            text-align: left;
+            clear: both;
+
+            .timeline-date {
+                position: absolute;
+                top: 13px;
+                left: -35%;
+                margin: 0;
+                padding: 10px 20px;
+                background-color: $first-color;
+                color: $menu-text-color;
+                border-radius: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .timeline::before {
+        left: 5px;
+    }
+    .timeline {
+        ul {
+            li {
+                width: 100%;
+                padding-top: 90px;
+            }
+            li:nth-child(odd)::before{
+                content: '';
+                position: absolute;
+                top: 24px;
+                left: 1px;
+                width: 10px;
+                height: 10px;
+                background-color: #818181;
+                border-radius: 50%;
+            }
+            li:nth-child(odd) {
+                float: left;
+                text-align: left;
+                clear: both;
+    
+                .timeline-date {
+                    position: absolute;
+                    top: 13px;
+                    left: 20px;
+                    width: fit-content;
+                    margin: 0;
+                    padding: 10px 20px;
+                    background-color: $first-color;
+                    color: $menu-text-color;
+                    border-radius: 30px;
+                }
+            }
+            li:nth-child(even)::before{
+                content: '';
+                position: absolute;
+                top: 24px;
+                left: 1px;
+                width: 10px;
+                height: 10px;
+                background-color: #818181;
+                border-radius: 50%;
+            }
+            li:nth-child(even) {
+                float: right;
+                text-align: left;
+                clear: both;
+    
+                .timeline-date {
+                    position: absolute;
+                    top: 13px;
+                    left: 20px;
+                    margin: 0;
+                    padding: 10px 20px;
+                    background-color: $first-color;
+                    color: $menu-text-color;
+                    border-radius: 30px;
+                }
+            }
+        }
+    }
+}
