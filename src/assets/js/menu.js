@@ -1,5 +1,5 @@
 function closeByLink() {
-    if(screen.width < 480) {
+    if(screen.width <= 1024) {
         const toggle = document.querySelector('[c-toggle="close"]')
         const nav = document.querySelector('nav')
         document.querySelectorAll('[c-link]').forEach(link => {

@@ -12,7 +12,7 @@ function turnLinkSelected(hash) {
 
     const link = document.querySelector(`[c-link='${hash}']`)
     link.classList.add('selected')
-    if(screen.width < 480) {setHeaderTitle(link)}
+    if(screen.width <= 1024) {setHeaderTitle(link)}
 }
 
 

@@ -119,13 +119,7 @@ nav {
     }
 }
 
-@media screen and (max-width: 768px) {
-    nav {
-        width: 30%;
-    }
-}
-
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1024px) {
     nav {
         left: -100vw;
         top: 39px;
