@@ -1,0 +1,54 @@
+.skill-list {
+    list-style: none;
+    padding: 20px;
+    background-color: $fourth-color;
+    margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    border-radius: 10px;
+
+    li {
+        padding: 10px;
+        border-radius: 10px;
+        margin: 20px 15px;
+        max-width: 180px;
+        width: 100%;
+        transition: all .2s ease-in-out;
+
+        .item-content{
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            .skill-icon {
+                img {
+                    max-width: 150px;
+                    padding: 5px 0;
+                }
+            }
+
+            .percentual {
+                width: 100%;
+                margin: 10px 0;
+                height: 10px;
+                background: $second-color;
+
+                .percent-bar {
+                    background: $first-color;
+                    color: $menu-text-color;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+   
+}
