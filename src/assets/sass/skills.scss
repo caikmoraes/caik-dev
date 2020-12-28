@@ -1,54 +1,45 @@
-.skill-list {
-    list-style: none;
-    padding: 20px;
-    background-color: $fourth-color;
-    margin: 0 auto;
-    max-width: 1000px;
+.skills {
     display: flex;
-    justify-content: center;
     flex-flow: row wrap;
+    justify-content: center;
     border-radius: 10px;
+    padding: 10px;
+    padding-bottom: 100px;
 
-    li {
+    .skill-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         padding: 10px;
-        border-radius: 10px;
-        margin: 20px 15px;
-        max-width: 180px;
-        width: 100%;
+        margin: 10px;
+        background: $fourth-color;
+        border-radius: 5px;
         transition: all .2s ease-in-out;
+        height: 200px;
+        
 
-        .item-content{
-            display: flex;
-            flex-wrap: nowrap;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
+        img {
+            width: 100px;
+        }
 
-            .skill-icon {
-                img {
-                    max-width: 150px;
-                    padding: 5px 0;
-                }
-            }
-
-            .percentual {
-                width: 100%;
-                margin: 10px 0;
-                height: 10px;
-                background: $second-color;
-
-                .percent-bar {
-                    background: $first-color;
-                    color: $menu-text-color;
-                    height: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 50%;
-                }
-            }
+        span {
+            margin: 10px 0;
         }
     }
+    
+    .skill-item:hover {
+        transform: scale(1.1);
+    }
+}
 
-   
+@media screen and (max-width: 1024px) {
+    .skill-item.animate {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .skill-item {
+        opacity: 0;
+        transform: translate3d(-50px, 0, 0);
+    }
 }
