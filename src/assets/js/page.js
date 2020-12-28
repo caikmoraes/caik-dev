@@ -4,7 +4,7 @@ function alignPageContent() {
     const footer = document.querySelector('footer')
     if(screen.width > 1024) {
         page.style.marginLeft = nav.offsetWidth + 'px'
-        footer.style.marginLeft = nav.offsetWidth + 'px'
+        // footer.style.marginLeft = nav.offsetWidth + 'px'
     }
     
 }
