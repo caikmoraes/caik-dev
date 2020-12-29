@@ -12,5 +12,4 @@ function showOnScroll() {
 
 }
 
-document.addEventListener('DOMContentLoaded', showOnScroll)
 document.addEventListener('scroll', showOnScroll)
