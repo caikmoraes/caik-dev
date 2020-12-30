@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     padding-bottom: 60px;
-
+    
     .skills {
         display: flex;
         flex-flow: row wrap;
@@ -10,7 +10,7 @@
         align-items: center;
         border-radius: 10px;
         padding: 10px;
-    
+
         .skill-item {
             display: flex;
             flex-direction: column;
@@ -24,6 +24,8 @@
             height: 200px;
             width: 150px;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transform: translate3d(-50px, 0, 0);
     
             img {
                 max-width: 150px;
@@ -34,6 +36,11 @@
                 margin: 10px 0;
             }
         }
+
+        .skill-item.animate {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
     
         .skill-item:hover {
             transform: scale(1.1);
@@ -41,29 +48,29 @@
     }
 }
 
-@media screen and (max-width: 760px) {
-    .skill-item {
-        opacity: 0;
-        transform: translate3d(-50px, 0, 0);
-    }
-    .skill-item.animate {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
+// @media screen and (max-width: 760px) {
+//     .skill-item {
+//         opacity: 0;
+//         transform: translate3d(-50px, 0, 0);
+//     }
+//     .skill-item.animate {
+//         opacity: 1;
+//         transform: translate3d(0, 0, 0);
+//     }
+// }
 
-@media screen and (max-width: 480px) {
-    .skill-item.small {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
+// @media screen and (max-width: 480px) {
+//     .skill-item.small {
+//         opacity: 1;
+//         transform: translate3d(0, 0, 0);
+//     }
+// }
 
-@media screen and (min-width: 481px) and (max-width: 760px) {
+// @media screen and (min-width: 481px) and (max-width: 760px) {
 
-    .skill-item.small,
-    .skill-item.medium {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
+//     .skill-item.small,
+//     .skill-item.medium {
+//         opacity: 1;
+//         transform: translate3d(0, 0, 0);
+//     }
+// }

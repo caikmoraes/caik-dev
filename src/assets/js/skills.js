@@ -1,15 +1,10 @@
-function showOnScroll() {
-    const elements = document.querySelectorAll('[c-skill]')
-    const animationClass = 'animate'
-    const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4)
-    elements.forEach(element => {
-        if (windowTop >= element.offsetTop) {
-            element.classList.add(animationClass)
-        } else {
-            element.classList.remove(animationClass)
-        }
+function showSkills() {
+    const skills = document.querySelectorAll('[c-skill]')
+    skills.forEach((skill, i) => {
+        setTimeout(function () {
+            skill.classList.add('animate')
+        }, i * 150)
     })
-
 }
 
-document.addEventListener('scroll', showOnScroll)
+document.addEventListener('ready', showSkills)

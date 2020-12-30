@@ -43,7 +43,20 @@ function firstNavigation() {
     }
 }
 
-window.onhashchange = e => ajaxNavigation(location.hash)
+function showSkills() {
+    if (location.hash.indexOf('skills') != -1) {
+        const skills = document.querySelectorAll('[c-skill]')
+        skills.forEach((skill, i) => {
+            setTimeout(function() {
+                skill.classList.add('animate')
+            }, i * 150)
+        })
+    }
+}
+
+window.onhashchange = e => {
+    ajaxNavigation(location.hash)
+}
 
 configureLinks()
 firstNavigation()

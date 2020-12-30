@@ -21,7 +21,7 @@ async function appCSS() {
 }
 
 async function appJS() {
-    return gulp.src('src/assets/js/**/*.js', {allowEmpty: true})
+    return gulp.src('src/assets/js/*.js', {allowEmpty: true})
         .pipe(babel({presets: ['env']}))
         .pipe(uglify())
         .pipe(concat('app.min.js'))

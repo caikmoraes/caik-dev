@@ -27,11 +27,14 @@ function closeMenu(toggleClose, nav) {
 
 function disableScroll(disable) {
     const page = document.querySelector('main')
+    const menu = document.querySelector('nav')
     if(disable) {
         page.style.overflowY = 'hidden'
+        menu.style.overflowY = 'scroll'
     }
     else {
         page.style.overflowY = 'scroll'
+        menu.style.overflowY = 'hidden'
     }
 }
 
