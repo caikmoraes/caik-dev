@@ -6,5 +6,3 @@ function showSkills() {
         }, i * 150)
     })
 }
-
-document.addEventListener('ready', showSkills)
