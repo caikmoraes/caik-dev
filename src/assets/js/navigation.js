@@ -19,7 +19,7 @@ function fireFunctions(url) {
             console.log(page)
             break
         case 'portfolio.html':
-            console.log(page)
+            getPortfolioLinks()
             break
     }
 }
