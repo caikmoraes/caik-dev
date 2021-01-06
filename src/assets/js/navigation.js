@@ -1,12 +1,6 @@
 function fireFunctions(url) {
     const page = url.split('pages/')[1]
     switch (page) {
-        case 'begin.html':
-            console.log(page)
-            break
-        case 'about.html':
-            console.log(page)
-            break
         case 'education.html':
             console.log(page)
             break

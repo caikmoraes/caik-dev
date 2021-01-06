@@ -3,6 +3,6 @@ function showSkills() {
     skills.forEach((skill, i) => {
         setTimeout(function () {
             skill.classList.add('animate')
-        }, i * 150)
+        }, i * 170)
     })
 }

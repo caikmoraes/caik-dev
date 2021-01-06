@@ -1,0 +1,17 @@
+.education {
+    padding: 50px 10px;
+
+    .education-title{
+        text-align: center;
+    }
+
+    .education-text {
+        display: flex;
+        align-items: center;
+
+        p {
+            padding: 15px 5px;
+        }
+    }
+
+}
