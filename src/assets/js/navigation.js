@@ -42,8 +42,9 @@ function ajaxNavigation(link) {
     const dest = document.querySelector('[c-page-content]')
     const url = link.substring(1)
     fetch(url)
-        .then(resp => resp.text())
-        .then(html => {
+    .then(resp => resp.text())
+    .then(html => {
+            document.documentElement.scrollTop = 0
             dest.innerHTML = html
             turnLinkSelected(link)
         })
