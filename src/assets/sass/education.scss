@@ -1,0 +1,36 @@
+.education {
+    padding: 20px 15px 60px 15px;
+
+    .edu-content {
+        width: 100%;
+        max-width: 700px;
+        margin: auto;
+
+        .edu-item {
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: $fifth-color;
+            border-radius: 5px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.322);
+
+            h4 {
+                color: $second-color;
+                margin: 2px 0;
+            }
+
+            h5 {
+                color: $third-color;
+            }
+
+            p{
+                margin-top: 4px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .education {
+        padding-top: 60px;
+    }
+}

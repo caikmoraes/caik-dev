@@ -7,9 +7,20 @@
 @import 'education.scss';
 @import 'begin.scss';
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto';
+}
+
+h2 {
+    width: fit-content;
+    padding: 5px 0;
+
+    .line {
+        width: 60%;
+        height: 4px;
+        background: linear-gradient(to right, $first-color, $fourth-color, $first-color, $fourth-color, $first-color, $fourth-color, $first-color);
+    }
 }
